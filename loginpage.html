@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-image: url('124.jpg'); /* Correct relative path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            background-color: #ffd987;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #69460a;
+            color: rgb(251, 250, 247);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #69460a;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2 style="font-family: Impact;"><pre>CINAMON HOSTELS
+        </pre></h2>
+        <button class="btn" id="staffButton"><b>Enter Id</b></button>
+    </div>
+
+    <script>
+        document.getElementById('staffButton').addEventListener('click', function() {
+            // Prompt for staff ID
+            var staffID = prompt('Please enter your ID:');
+            
+            if (staffID && staffID.toLowerCase() === 'admin') {
+                // Redirect to your existing staff dashboard (use your local path)
+                window.location.href = 'file:///E:/h2/hostel-management/frontend/index.html';
+            } else if (staffID && staffID.toLowerCase() === 'student'){
+                window.location.href = 'file:///E:/h2/html/manufacturer.html';
+            }
+            else{
+                print('INVALID ID')
+            }
+        });
+    </script>
+</body>
+</html>
